@@ -1,0 +1,26 @@
+// RTC-scilab Toolbox
+// Create : 2009/12/02
+// Author : yuki suga @ ysuga.net
+//
+// copyright : ysuga.net, 2009
+
+2010/06/10 Firstly Released as a Toolbox.
+
+2010/07/30 v0.6.0 Synchronization function is installed.
+
+2010/10/18 v0.7.0 Interfaces API functions are changed.
+                  Help documents are added.
+                  Support for OpenHRP3.1 Release vresion
+                  Support for Linux Operating System
+                  
+2010/12/06 v0.7.1 Help documents are added
+
+2010/12/08 v0.7.2 default rtc.conf is modified.
+
+2010/12/09 v0.7.2 RTC_Blocks.xcos is modified for scilab5.3beta5
+
+2010/12/18 v0.7.5 RTC_Blocks.xcos, and macros are modified for bug in xcos.
+
+2011/06/14 v0.8.0 Help compilation is fixed. Pallette is safely compiled.
+
+2011/06/16 v0.8.1 OpenHRP3 demonstration is modified.

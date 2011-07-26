@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * Scilab ( http://www.scilab.org/ ) - This file is part of Scilab
+ * Copyright (C) INRIA - Allan CORNET
+ * 
+ * This file is released into the public domain
+ *
+ -->
+<refentry version="5.0-subset Scilab" xml:id="Port_getSubscriptionType" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:db="http://docbook.org/ns/docbook">
+  <info>
+    <pubdate>$LastChangedDate: 2008-03-26 09:50:39 +0100 (mer., 26 mars 2008)
+    $</pubdate>
+  </info>
+
+  <refnamediv>
+    <refname>Port_getSubscriptionType</refname>
+
+    <refpurpose>Get SubscriptionType of Port of RTC</refpurpose>
+  </refnamediv>
+
+
+  <refsynopsisdiv>
+    <title>Calling Sequence</title>
+
+    <synopsis>ret=Port_getSubscriptionType(port)</synopsis>
+  </refsynopsisdiv>
+  <refsection>
+    <title>Parameters</title>
+    <variablelist>
+      <varlistentry>
+        <term>port</term>
+        <listitem>
+          <para>Handle of Port.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term>ret</term>
+        <listitem>
+          <para>string. Subscription type.</para>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </refsection>
+  
+  
+  
+  <refsection>
+    <title>Description</title>
+
+    <para>This function get Port subscription type.</para>
+  </refsection>
+
+  <refsection>
+    <title>Examples</title>
+
+    <programlisting role="example">
+      cn = CorbaNaming_create("localhost:2809");
+      rtobject =CorbaNaming_resolve(cn, "ysuga_pc.host_cxt/ConsoleIn0.rtc");
+      port1=RTObject_getPort(rtobject, "out");
+      disp(Port_getProfileList(port1) ); </programlisting>
+  </refsection>
+
+  <refsection id="SeeAlso_Port">
+    <title>See Also</title>
+
+    <itemizedlist>
+      <listitem>
+          <link linkend="CorbaNaming">CorbaNaming</link> -  Reference of CorbaNaming Service.
+      </listitem>
+      <listitem>
+        <link linkend="RTObject">RTObject</link> -  Reference of RT-Component
+      </listitem>
+      <listitem>
+        <link linkend="RTObject_getPort">RTObject_getPort</link> - get Port Reference
+      </listitem>
+      <listitem>
+        <link linkend="Port">Port</link> - Handle value of Port of RT object.
+      </listitem>
+      <listitem>
+        <link linkend="Port_getName">Port_getName</link> -  get Port Name
+      </listitem>
+      <listitem>
+        <link linkend="Port_getProfileList">Port_getProfileList</link> -  get Port Profile
+      </listitem>
+      <listitem>
+        <link linkend="Port_getPortType">Port_getPortType</link> -  get Port Type Profile
+      </listitem>
+      <listitem>
+        <link linkend="Port_getDataType">Port_getDataType</link> -  get Port's Data Type Profile
+      </listitem>
+      <listitem>
+        <link linkend="Port_getSubscriptionType">Port_getSubscriptionType</link> -  get Port's subscription type Profile
+      </listitem>
+      <listitem>
+        <link linkend="Port_getDataflowType">Port_getDataflowType</link> -  get Port's dataflow type Profile
+      </listitem>
+      <listitem>
+        <link linkend="Port_getInterfaceType">Port_getInterfaceType</link> -  get Port's interface type Profile
+      </listitem>
+      <listitem>
+        <link linkend="Connection_create">Connection_create</link> -  Create connection between ports.
+      </listitem>
+
+    </itemizedlist>
+  </refsection>
+  
+  
+  <refsection>
+    <title>Authors</title>
+    <simplelist type="vert">
+      <member>Yuki Suga (ysuga.net)</member>
+    </simplelist>
+  </refsection>
+</refentry>

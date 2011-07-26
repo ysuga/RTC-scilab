@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * RTC-scilab (http://www.ysuga.net/robot/rtm/rtc_scilab) - This file is part of RTC-scilab
+ * Copyright (C) ysuga.net == Yuki Suga
+ * This file must be used under the terms of the CeCILL.
+ * This source file is licensed as described in the file COPYING, which
+ * you should have received as part of this distribution.  The terms
+ * are also available at
+ * http://www.cecill.info/licences/Licence_CeCILL_V2-en.txt
+ *
+ -->
+<refentry version="5.0-subset Scilab" xml:id="InPort_read" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:db="http://docbook.org/ns/docbook">
+  <info>
+    <pubdate>$LastChangedDate: 2008-03-26 09:50:39 +0100 (mer., 26 mars 2008)
+    $</pubdate>
+  </info>
+
+  <refnamediv>
+    <refname>InPort_read</refname>
+
+    <refpurpose>Read Data From InPort.</refpurpose>
+  </refnamediv>
+
+  <refsynopsisdiv>
+    <title>Calling Sequence</title>
+
+    <synopsis>data=InPort_read(port, sz)</synopsis>
+  </refsynopsisdiv>
+  <refsection>
+    <title>Parameters</title>
+    <variablelist>
+      <varlistentry>
+        <term>port</term>
+        <listitem>
+          <para>Handle value of Outport. </para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>sz</term>
+        <listitem>
+          <para>vector. size of matrix to be read. </para>
+        </listitem>
+      </varlistentry>
+      
+      <varlistentry>
+        <term>data</term>
+        <listitem>
+          <para>vector.</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+
+  </refsection>
+
+  
+  <refsection>
+    <title>Description</title>
+    <para>This function read user's data from InPort.</para>
+    <para>Matrix data is written in the order as follows:</para>
+    <programlisting role="example">
+    Sequence                                                Matrix
+                                                            |1  4  7|
+                                                            |2  5  8|
+    [1 2 3 4 5 6 7 8 9]  ----------- DataOutPort ---------- |3  6  9|
+    </programlisting>
+  </refsection>
+
+  <refsection>
+    <title>Examples</title>
+
+    <programlisting role="example">
+      <link linkend="initRTM">initRTM</link>("Scilab");
+      rtc =  <link linkend="RTC_create">RTC_create</link>();
+
+      port = <link linkend="RTC_registerInPort">RTC_registerInPort</link>(rtc, "TimedDoubleSeq", "in0");
+      if <link linkend="InPort_poll">InPort_poll</link>(port) then,
+        sz = [3 3];
+        data =  <link linkend="InPort_read">InPort_read</link>(port, sz);
+      end; </programlisting>
+  </refsection>
+
+  <refsection id="SeeAlso_RTC_registerOutPort">
+    <title>See Also</title>
+
+    <itemizedlist>
+      <listitem>
+          <link linkend="RTC_registerOutPort">RTC_registerOutPort</link> - append DataOutPort.
+      </listitem>
+      <listitem>
+          <link linkend="RTC_registerInPort">RTC_registerInPort</link> - append DataInPort.
+      </listitem>
+      <listitem>
+          <link linkend="OutPort_write">OutPort_write</link> - write data to OutPort.
+      </listitem>
+      <listitem>
+          <link linkend="InPort_poll">InPort_poll</link> - check InPort.
+      </listitem>
+      <listitem>
+          <link linkend="InPort_read">InPort_read</link> - read data from InPort.
+      </listitem>
+    </itemizedlist>
+  </refsection>
+  
+  
+  <refsection>
+    <title>Authors</title>
+    <simplelist type="vert">
+      <member>Yuki Suga (ysuga.net)</member>
+    </simplelist>
+  </refsection>
+</refentry>

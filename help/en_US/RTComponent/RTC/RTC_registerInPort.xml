@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * Scilab ( http://www.scilab.org/ ) - This file is part of Scilab
+ * Copyright (C) INRIA - Allan CORNET
+ * 
+ * This file is released into the public domain
+ *
+ -->
+<refentry version="5.0-subset Scilab" xml:id="RTC_registerInPort" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:db="http://docbook.org/ns/docbook">
+  <info>
+    <pubdate>$LastChangedDate: 2008-03-26 09:50:39 +0100 (mer., 26 mars 2008)
+    $</pubdate>
+  </info>
+
+  <refnamediv>
+    <refname>RTC_registerInPort</refname>
+
+    <refpurpose>Append InPort to RT-component. This function will be vanish. Please use RTC_addInPort instead.</refpurpose>
+  </refnamediv>
+
+  <refsynopsisdiv>
+    <title>Calling Sequence</title>
+
+    <synopsis>port=RTC_registerInPort(rtc, type, name)</synopsis>
+  </refsynopsisdiv>
+  <refsection>
+    <title>Parameters</title>
+    <variablelist>
+      <varlistentry>
+        <term>rtc</term>
+        <listitem>
+          <para>Handle value of RT-component. Negative value if fail.</para>
+        </listitem>
+      </varlistentry>
+    
+      <varlistentry>
+        <term>type</term>
+        <listitem>
+          <para>String. Type-Name of DataPort. RTC-scilab is currently available for "TimedLong", "TimedLongSeq", "TimedFloat", "TimedFloatSeq", "TimedDouble", "TimedDoubleSeq", "TimedBoolean", and "TimedBooleanSeq".</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term>name</term>
+        <listitem>
+          <para>String. Name of DataPort.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term>port</term>
+        <listitem>
+          <para>Handle value of DataInPort. Nevative value if fail.</para>
+        </listitem>
+      </varlistentry>
+      
+    </variablelist>
+
+  </refsection>
+
+  
+  <refsection>
+    <title>Description</title>
+
+    <para>This function append DataInPort to the RTC.</para>
+  </refsection>
+
+  <refsection>
+    <title>Examples</title>
+
+    <programlisting role="example">
+      initRTM("Scilab");
+      rtc = RTC_create();
+      
+      port = RTC_registerInPort(rtc, "TimedDouble", "in0");</programlisting>
+  </refsection>
+
+  <refsection id="SeeAlso_RTC_registerInPort">
+    <title>See Also</title>
+
+    <itemizedlist>
+      <listitem>
+          <link linkend="RTC_addOutPort">RTC_addOutPort</link> - append DataOutPort.
+      </listitem>
+      <listitem>
+          <link linkend="RTC_addInPort">RTC_addInPort</link> - append DataInPort.
+      </listitem>
+      <listitem>
+          <link linkend="OutPort_write">OutPort_write</link> - write data to OutPort.
+      </listitem>
+      <listitem>
+          <link linkend="InPort_read">InPort_read</link> - read data from InPort.
+      </listitem>
+
+    </itemizedlist>
+
+  </refsection>
+  
+  
+  <refsection>
+    <title>Authors</title>
+    <simplelist type="vert">
+      <member>Yuki Suga (ysuga.net)</member>
+    </simplelist>
+  </refsection>
+</refentry>

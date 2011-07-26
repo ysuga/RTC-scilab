@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * Scilab ( http://www.scilab.org/ ) - This file is part of Scilab
+ * Copyright (C) INRIA - Allan CORNET
+ * 
+ * This file is released into the public domain
+ *
+ -->
+<refentry version="5.0-subset Scilab" xml:id="rtcconf_modify" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:db="http://docbook.org/ns/docbook">
+  <info>
+    <pubdate>$LastChangedDate: 2008-03-26 09:50:39 +0100 (mer., 26 mars 2008)
+    $</pubdate>
+  </info>
+
+  <refnamediv>
+    <refname>rtcconf_modify</refname>
+
+    <refpurpose>Modify rtc.conf file </refpurpose>
+  </refnamediv>
+
+  <refsynopsisdiv>
+    <title>Calling Sequence</title>
+
+    <synopsis>e=rtcconf_modify(key, value)</synopsis>
+  </refsynopsisdiv>
+  <refsection>
+    <title>Parameters</title>
+    <variablelist>
+      <varlistentry>
+        <term>key</term>
+        <listitem>
+          <para>string. key of parameter.</para>
+        </listitem>
+      </varlistentry>
+      <varlistentry>
+        <term>value</term>
+        <listitem>
+          <para>string. value of parameter.</para>
+        </listitem>
+      </varlistentry>
+      
+      <varlistentry>
+        <term>e</term>
+        <listitem>
+          <para>Zero if success. Non-zero if failed.</para>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </refsection>
+
+  
+  <refsection>
+    <title>Description</title>
+
+    <para>This function modify rtc.conf.</para>
+  </refsection>
+
+  <refsection>
+    <title>Examples</title>
+
+    <programlisting role="example">
+      rtcconf_modify("naming.formats", "%h.host_cxt/%n.rtc");
+      rtcconf_modify("exec_cxt.periodic.type", "SimulationEC");</programlisting>
+  </refsection>
+ 
+  <refsection id="SeeAlso_rtcconf_modify">
+    <title>See Also</title>
+
+    <itemizedlist>
+      <listitem>
+        <link linkend="rtcconf_generate">rtcconf_generate</link> - generate rtc.conf.
+      </listitem>
+      <listitem>
+        <link linkend="rtcconf_showall">rtcconf_showall</link> - show all parameter of rtc.conf.
+      </listitem>
+      <listitem>
+        <link linkend="rtcconf_get">rtcconf_get</link> - get specified parameter of rtc.conf.
+      </listitem>
+      <listitem>
+        <link linkend="rtcconf_modify">rtcconf_modify</link> - modify specified parameter of rtc.conf.
+      </listitem>
+    </itemizedlist>
+  </refsection>
+  
+  
+  <refsection>
+    <title>Authors</title>
+    <simplelist type="vert">
+      <member>Yuki Suga (ysuga.net)</member>
+    </simplelist>
+  </refsection>
+</refentry>

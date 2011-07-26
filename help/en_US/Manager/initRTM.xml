@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * Scilab ( http://www.scilab.org/ ) - This file is part of Scilab
+ * Copyright (C) INRIA - Allan CORNET
+ * 
+ * This file is released into the public domain
+ *
+ -->
+<refentry version="5.0-subset Scilab" xml:id="initRTM" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:db="http://docbook.org/ns/docbook">
+  <info>
+    <pubdate>$LastChangedDate: 2008-03-26 09:50:39 +0100 (mer., 26 mars 2008)
+    $</pubdate>
+  </info>
+
+  <refnamediv>
+    <refname>initRTM</refname>
+
+    <refpurpose>Initialize RTC-scilab. </refpurpose>
+  </refnamediv>
+
+  <refsynopsisdiv>
+    <title>Calling Sequence</title>
+
+    <synopsis>initRTM([defName [,libpath]])</synopsis>
+  </refsynopsisdiv>
+  <refsection>
+    <title>Parameters</title>
+    <variablelist>
+      <varlistentry>
+        <term>defName</term>
+        <listitem>
+          <para>String. Default Component Name. Default value is LabRTC.</para>
+        </listitem>
+      </varlistentry>
+    
+      <varlistentry>
+        <term>libpath</term>
+        <listitem>
+          <para>String. Directory path for rtc.conf. Default value is current directory.</para>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </refsection>
+
+  
+  <refsection>
+    <title>Description</title>
+
+    <para>This function initialize RTC-scilab environment.</para>
+  </refsection>
+
+  <refsection>
+    <title>Examples</title>
+
+    <programlisting role="example">
+     initRTM("Scilab", "C:/users/ysuga/");
+    </programlisting>
+  </refsection>
+
+  <refsection id="SeeAlso_initRTM">
+    <title>See Also</title>
+
+    <itemizedlist>
+      <listitem>
+          <link linkend="initRTM">initRTM</link> - initialize RTC-scilab environment.
+      </listitem>
+      <listitem>
+          <link linkend="RTC_create">RTC_create</link> - create RT-Component.
+      </listitem>
+      <listitem>
+          <link linkend="RTC_destroy">RTC_destroy</link> - destroy RT-Component.      </listitem>
+      <listitem>
+          <link linkend="exitRTM">exitRTM</link> - exit RTC-scilab.
+      </listitem>
+    </itemizedlist>
+  </refsection>
+  
+  
+  <refsection>
+    <title>Authors</title>
+    <simplelist type="vert">
+      <member>Yuki Suga (ysuga.net)</member>
+    </simplelist>
+  </refsection>
+</refentry>

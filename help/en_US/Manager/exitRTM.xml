@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * Scilab ( http://www.scilab.org/ ) - This file is part of Scilab
+ * Copyright (C) INRIA - Allan CORNET
+ * 
+ * This file is released into the public domain
+ *
+ -->
+<refentry version="5.0-subset Scilab" xml:id="exitRTM" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:db="http://docbook.org/ns/docbook">
+  <info>
+    <pubdate>$LastChangedDate: 2008-03-26 09:50:39 +0100 (mer., 26 mars 2008)
+    $</pubdate>
+  </info>
+
+  <refnamediv>
+    <refname>exitRTM</refname>
+
+    <refpurpose>exit RTC-scilab.</refpurpose>
+  </refnamediv>
+
+  <refsynopsisdiv>
+    <title>Calling Sequence</title>
+
+    <synopsis>exitRTM()</synopsis>
+  </refsynopsisdiv>
+    
+  <refsection>
+    <title>Description</title>
+
+    <para>Exit RTC-scilab and close scilab environment at the same time.
+    </para>
+  </refsection>
+
+  <refsection>
+    <title>Examples</title>
+
+    <programlisting role="example">
+      initRTM("Scilab");
+
+      ...
+
+      exitRTM();</programlisting>
+  </refsection>
+
+  <refsection id="SeeAlso_exitRTM">
+    <title>See Also</title>
+
+    <itemizedlist>
+      <listitem>
+          <link linkend="initRTM">initRTM</link> - initialize RTC-scilab environment.
+      </listitem>
+      <listitem>
+          <link linkend="RTC_create">RTC_create</link> - create RT-Component.
+      </listitem>
+      <listitem>
+          <link linkend="RTC_destroy">RTC_destroy</link> - destroy RT-Component.      </listitem>
+      <listitem>
+          <link linkend="exitRTM">exitRTM</link> - exit RTC-scilab.
+      </listitem>
+
+
+    </itemizedlist>
+  </refsection>
+  
+  
+  <refsection>
+    <title>Authors</title>
+    <simplelist type="vert">
+      <member>Yuki Suga (ysuga.net)</member>
+    </simplelist>
+  </refsection>
+</refentry>

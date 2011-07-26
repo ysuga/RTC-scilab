@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * Scilab ( http://www.scilab.org/ ) - This file is part of Scilab
+ * Copyright (C) INRIA - Allan CORNET
+ * 
+ * This file is released into the public domain
+ *
+ -->
+<refentry version="5.0-subset Scilab" xml:id="RTC" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:db="http://docbook.org/ns/docbook">
+  <info>
+    <pubdate>$LastChangedDate: 2008-03-26 09:50:39 +0100 (mer., 26 mars 2008)
+    $</pubdate>
+  </info>
+
+  <refnamediv>
+    <refname>RTC</refname>
+
+    <refpurpose>Handle of Scilab's RT-Component</refpurpose>
+  </refnamediv>
+
+  <refsection>
+    <title>Description</title>
+
+    <para>This handle value is used as the reference number of RT-component created by RTC-scilab.</para>
+  </refsection>
+
+  <refsection>
+    <title>Examples</title>
+
+    <programlisting role="example">
+      initRTM("Scilab");
+      rtc = RTC_create();
+      portOut0=RTC_addOutPort(rtc, "TimedDouble", "out0");
+      portIn0=RTC_addInPort(rtc, "TimedDouble", "in0");
+      ...
+      RTC_destroy(rtc);
+      exitRTM(); </programlisting>
+  </refsection>
+
+  <refsection id="SeeAlso_RTC">
+    <title>See Also</title>
+
+    <itemizedlist>
+      <listitem>
+      <link linkend="RTC_create">RTC_create</link> - create RT-Component.
+      </listitem>
+      <listitem>
+        <link linkend="RTC_getInstanceName">RTC_getInstanceName</link> - get Instance Name of RT-Component.
+      </listitem>
+      <listitem>
+        <link linkend="RTC_addOutPort">RTC_addOutPort</link> - append DataOutPort.
+      </listitem>
+      <listitem>
+        <link linkend="RTC_addInPort">RTC_addInPort</link> - append DataInPort.
+      </listitem>
+      <listitem>
+        <link linkend="RTC_getOutPort">RTC_getOutPort</link> - get OutPort handle if it exists.
+      </listitem>
+      <listitem>
+        <link linkend="RTC_getInPort">RTC_getInPort</link> - get InPort handle if it exists.
+      </listitem>
+      <listitem>
+        <link linkend="RTC_deleteOutPort">RTC_deleteOutPort</link> - delete OutPort.
+      </listitem>
+      <listitem>
+        <link linkend="RTC_deleteInPort">RTC_deleteInPort</link> - delete InPort.
+      </listitem>
+      <listitem>
+          <link linkend="RTC_destroy">RTC_destroy</link> - destroy RT-Component.
+      </listitem>
+    </itemizedlist>
+  </refsection>
+  
+  
+  <refsection>
+    <title>Authors</title>
+    <simplelist type="vert">
+      <member>Yuki Suga (ysuga.net)</member>
+    </simplelist>
+  </refsection>
+</refentry>

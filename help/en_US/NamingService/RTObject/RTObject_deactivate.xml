@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * Scilab ( http://www.scilab.org/ ) - This file is part of Scilab
+ * Copyright (C) INRIA - Allan CORNET
+ * 
+ * This file is released into the public domain
+ *
+ -->
+<refentry version="5.0-subset Scilab" xml:id="RTObject_deactivate" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:db="http://docbook.org/ns/docbook">
+  <info>
+    <pubdate>$LastChangedDate: 2008-03-26 09:50:39 +0100 (mer., 26 mars 2008)
+    $</pubdate>
+  </info>
+
+  <refnamediv>
+    <refname>RTObject_deactivate</refname>
+
+    <refpurpose>Deactivate RT object</refpurpose>
+  </refnamediv>
+
+
+  <refsynopsisdiv>
+    <title>Calling Sequence</title>
+
+    <synopsis>ret=RTObject_deactivate(rto)</synopsis>
+  </refsynopsisdiv>
+  <refsection>
+    <title>Parameters</title>
+    <variablelist>
+      <varlistentry>
+        <term>rto</term>
+        <listitem>
+          <para>Handle of RTObject.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term>ret</term>
+        <listitem>
+          <para>return value. negative if fail</para>
+        </listitem>
+      </varlistentry>
+      
+    </variablelist>
+
+  </refsection>
+  
+  <refsection>
+    <title>Description</title>
+
+    <para>This value is used as the reference id of RT-object on the CorbaNaming service.</para>
+  </refsection>
+
+  <refsection>
+    <title>Examples</title>
+
+    <programlisting role="example">
+      cn = CorbaNaming_create("localhost:2809");
+      rtobject = CorbaNaming_resolve(cn, "ysuga_pc.host_cxt/ConsoleIn0.rtc");
+      ....
+      ret = RTObject_deactivate(rtobject);
+    </programlisting>
+  </refsection>
+
+  <refsection id="SeeAlso_CorbaNaming_create">
+    <title>See Also</title>
+
+    <itemizedlist>
+      <listitem>
+          <link linkend="CorbaNaming">CorbaNaming</link> -  Reference of CorbaNaming Service.
+      </listitem>
+      <listitem>
+        <link linkend="RTObject_activate">RTObject_activate</link> -  activate RT-Component
+      </listitem>
+      <listitem>
+        <link linkend="RTObject_reset">RTObject_reset</link> -  reset RT-Component
+      </listitem>
+      <listitem>
+        <link linkend="RTObject_deactivate">RTObject_deactivate</link> -  deactivate RT-Component
+      </listitem>
+      <listitem>
+        <link linkend="RTObject_getCurrentState">RTObject_getCurrentState</link> -  get current state of RT-Component
+      </listitem>
+      <listitem>
+        <link linkend="RTObject_getPortNameList">RTObject_getPortNameList</link> -  get Port Name List of RT-Component
+      </listitem>
+      <listitem>
+        <link linkend="RTObject_getPort">RTObject_getPort</link> -  get Port of RT-Component
+      </listitem>
+    </itemizedlist>
+  </refsection>
+  
+  
+  <refsection>
+    <title>Authors</title>
+    <simplelist type="vert">
+      <member>Yuki Suga (ysuga.net)</member>
+    </simplelist>
+  </refsection>
+</refentry>

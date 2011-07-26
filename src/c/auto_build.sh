@@ -1,0 +1,3 @@
+cd RTCscilab;
+make;
+cd ..;

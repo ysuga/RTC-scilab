@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * RTC-scilab (http://www.ysuga.net/robot/rtm/rtc_scilab) - This file is part of RTC-scilab
+ * Copyright (C) ysuga.net == Yuki Suga
+ * This file must be used under the terms of the CeCILL.
+ * This source file is licensed as described in the file COPYING, which
+ * you should have received as part of this distribution.  The terms
+ * are also available at
+ * http://www.cecill.info/licences/Licence_CeCILL_V2-en.txt
+ *
+ -->
+<refentry version="5.0-subset Scilab" xml:id="RTC_getInstanceName" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:db="http://docbook.org/ns/docbook">
+  <info>
+    <pubdate>$LastChangedDate: 2008-03-26 09:50:39 +0100 (mer., 26 mars 2008)
+    $</pubdate>
+  </info>
+
+  <refnamediv>
+    <refname>RTC_getInstanceName</refname>
+
+    <refpurpose>Get Instance NameRT-component handle by Name</refpurpose>
+  </refnamediv>
+
+  <refsynopsisdiv>
+    <title>Calling Sequence</title>
+
+    <synopsis>name=RTC_getInstanceName(rtc)</synopsis>
+  </refsynopsisdiv>
+  <refsection>
+    <title>Parameters</title>
+    <variablelist>
+      <varlistentry>
+        <term>rtc</term>
+        <listitem>
+          <para>Handle value of RT-component. Negative value if fail.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term>name</term>
+        <listitem>
+          <para>String value</para>
+        </listitem>
+      </varlistentry>
+      
+    </variablelist>
+
+  </refsection>
+
+  
+  <refsection>
+    <title>Description</title>
+
+    <para>This function get DataInPort handle value from the RTC.</para>
+  </refsection>
+
+  <refsection>
+    <title>Examples</title>
+
+    <programlisting role="example">
+      initRTM("Scilab");
+      rtc = RTC_create();
+      
+      ...
+
+      name = RTC_getInstanceName(rtc);</programlisting>
+</refsection>
+
+  <refsection id="SeeAlso_RTC_getInstanceName">
+    <title>See Also</title>
+
+    <itemizedlist>
+      <listitem>
+          <link linkend="RTC_registerOutPort">RTC_registerOutPort</link> - append DataOutPort.
+      </listitem>
+      <listitem>
+          <link linkend="RTC_registerInPort">RTC_registerInPort</link> - append DataInPort.
+      </listitem>
+      <listitem>
+        <link linkend="RTC_getOutPort">RTC_getOutPort</link> - get DataOutPort Handle from RTC using Name only.
+      </listitem>
+      <listitem>
+        <link linkend="RTC_getInPort">RTC_getInPort</link> - get InOutPort Handle from RTC using Name only.
+      </listitem>
+      <listitem>
+        <link linkend="RTC_deleteOutPort">RTC_deleteOutPort</link> - delete DataOutPort.
+      </listitem>
+      <listitem>
+        <link linkend="RTC_deleteInPort">RTC_deleteInPort</link> - delete InOutPort.
+      </listitem>
+      <listitem>
+          <link linkend="OutPort_write">OutPort_write</link> - write data to OutPort.
+      </listitem>
+      <listitem>
+        <link linkend="InPort_poll">InPort_poll</link> - check InPort.
+      </listitem>
+      <listitem>
+          <link linkend="InPort_read">InPort_read</link> - read data from InPort.
+      </listitem>
+
+    </itemizedlist>
+  </refsection>
+  
+  
+  <refsection>
+    <title>Authors</title>
+    <simplelist type="vert">
+      <member>Yuki Suga (ysuga.net)</member>
+    </simplelist>
+  </refsection>
+</refentry>

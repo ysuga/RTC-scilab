@@ -1,0 +1,34 @@
+Toolbox: RTCscilab
+
+Title: RTCscilab Toolbox
+
+Summary: Toolbox for interconnect between RT (Robotics Technologies) Component and scilab.
+
+Version: 0.8
+
+Author: Yuki Suga <ysuga@ysuga.net>
+
+Maintainer: Yuki Suga <ysuga@ysuga.net>
+
+Category: robotics
+
+Entity: 
+
+WebSite: http://www.ysuga.net/robot/rtm/rtcscilab/
+
+License: CeCILL
+
+ScilabVersion: >= 5.3
+
+Depends: OpenRTM-aist C++ 1.0 RELEASE
+
+Date: 2010-06-10
+
+Description: Files for RTCscilab
+
+ install RTCscilab
+ 
+ unzip RTCscilab.zip and exec builder.sce
+ load RTCscilab in scilab
+
+ help RTCscilab
