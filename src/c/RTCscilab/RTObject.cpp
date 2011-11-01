@@ -71,7 +71,7 @@ EXPORT_FUNCTION_TYPE RTObject_activate(const int *Handle, int* retval)
 	RTC::CorbaConsumer<RTC::RTObject> corbaConsumer;
 	CORBA::Object_ptr object;
 	if((object=Resolve(*Handle)) == 0) {
-		err("Resolving Corba Consumer (addr=%s, name=%s) failed.", address, componentName);
+		err("Resolving Corba Consumer failed.");
 		*retval = -1; return;
 	}
 	corbaConsumer.setObject(object);
@@ -94,7 +94,7 @@ EXPORT_FUNCTION_TYPE RTObject_deactivate(const int *Handle, int* retval)
 	RTC::CorbaConsumer<RTC::RTObject> corbaConsumer;
 	CORBA::Object_ptr object;
 	if((object=Resolve(*Handle)) == 0) {
-		err("Resolving Corba Consumer (addr=%s, name=%s) failed.", address, componentName);
+		err("Resolving Corba Consumer");
 		*retval = -1; return;
 	}
 	corbaConsumer.setObject(object);
@@ -118,7 +118,7 @@ EXPORT_FUNCTION_TYPE RTObject_reset(const int *Handle, int* retval)
 	RTC::CorbaConsumer<RTC::RTObject> corbaConsumer;
 	CORBA::Object_ptr object;
 	if((object=Resolve(*Handle)) == 0) {
-		err("Resolving Corba Consumer (addr=%s, name=%s) failed.", address, componentName);
+		err("Resolving Corba Consumer failed.");
 		*retval = -1; return;
 	}
 	corbaConsumer.setObject(object);
@@ -142,7 +142,7 @@ EXPORT_FUNCTION_TYPE RTObject_exit(const int *Handle, int* retval)
 	RTC::CorbaConsumer<RTC::RTObject> corbaConsumer;
 	CORBA::Object_ptr object;
 	if((object=Resolve(*Handle)) == 0) {
-		err("Resolving Corba Consumer (addr=%s, name=%s) failed.", address, componentName);
+		err("Resolving Corba Consumer failed.");
 		*retval = -1; return;
 	}
 	corbaConsumer.setObject(object);
@@ -170,7 +170,7 @@ EXPORT_FUNCTION_TYPE RTObject_getCurrentState(const int *Handle,
 	RTC::CorbaConsumer<RTC::RTObject> corbaConsumer;
 	CORBA::Object_ptr object;
 	if((object=Resolve(*Handle)) == 0) {
-		err("Resolving Corba Consumer (addr=%s, name=%s) failed.", address, componentName);
+		err("Resolving Corba Consumer failed.");
 		*retval = -1; return;
 	}
 	corbaConsumer.setObject(object);
@@ -200,7 +200,7 @@ EXPORT_FUNCTION_TYPE RTObject_getPortNameList(const int *Handle,
 	RTC::CorbaConsumer<RTC::RTObject> corbaConsumer;
 	CORBA::Object_ptr object;
 	if((object=Resolve(*Handle)) == 0) {
-		err("Resolving Corba Consumer (addr=%s, name=%s) failed.", address, componentName);
+		err("Resolving Corba Consumer ");
 		strcpy(retval, "failed"); return;
 	}
 	corbaConsumer.setObject(object);
@@ -230,11 +230,10 @@ EXPORT_FUNCTION_TYPE RTObject_getConfSetNameList(const int *Handle,
 	RTC::CorbaConsumer<RTC::RTObject> corbaConsumer;
 	CORBA::Object_ptr object;
 	if((object=Resolve(*Handle)) == 0) {
-		err("Resolving Corba Consumer (addr=%s, name=%s) failed.", address, componentName);
+		err("Resolving Corba Consumer failed.");
 		strcpy(retval, "failed"); return;
 	}
 	corbaConsumer.setObject(object);
-
 
 	SDOPackage::Configuration_ptr pConf = corbaConsumer->get_configuration();
 	SDOPackage::ConfigurationSetList *pConfSetList = pConf->get_configuration_sets();
@@ -245,14 +244,13 @@ EXPORT_FUNCTION_TYPE RTObject_getConfSetNameList(const int *Handle,
 	strcpy(retval, str.c_str());
 }
 
-
 EXPORT_FUNCTION_TYPE RTObject_getInstanceName(const int *Handle, 
 											char* retval)
 {
 	RTC::CorbaConsumer<RTC::RTObject> corbaConsumer;
 	CORBA::Object_ptr object;
 	if((object=Resolve(*Handle)) == 0) {
-		err("Resolving Corba Consumer (addr=%s, name=%s) failed.", address, componentName);
+		err("Resolving Corba Consumer failed.");
 		strcpy(retval, "failed"); return;
 	}
 	corbaConsumer.setObject(object);

@@ -89,7 +89,7 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
-				CommandLine="copy $(OutDir)\$(ProjectName)d.dll ..\"
+				CommandLine="copy &quot;$(OutDir)\$(ProjectName)d.dll&quot; ..\"
 			/>
 		</Configuration>
 		<Configuration
@@ -168,7 +168,7 @@
 			/>
 			<Tool
 				Name="VCPostBuildEventTool"
-				CommandLine="copy $(OutDir)\$(ProjectName).dll ..\"
+				CommandLine="copy &quot;$(OutDir)\$(ProjectName).dll&quot; ..\"
 			/>
 		</Configuration>
 	</Configurations>

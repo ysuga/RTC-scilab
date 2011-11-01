@@ -32,12 +32,12 @@ EXPORT_FUNCTION_TYPE ConfigurationSet_getConfNameList(const int *Handle,
 													  char* confNameList)
 {
 	ConvertDmyStr(confSetName);
-	info("ConfigurationSet_getConfNameList(%s, %s, %s)", address, componentName, confSetName);
+	info("ConfigurationSet_getConfNameList(%s)", confSetName);
 
 	RTC::CorbaConsumer<RTC::RTObject> corbaConsumer;
 	CORBA::Object_ptr object;
 	if((object=Resolve(*Handle)) == 0) {
-		err("Resolving Corba Consumer (addr=%s, name=%s) failed.", address, componentName);
+		err("Resolving Corba Consumer failed.");
 		strcpy(confNameList, "failed");return;
 	}
 	corbaConsumer.setObject(object);
@@ -95,7 +95,7 @@ EXPORT_FUNCTION_TYPE Configuration_configure(const int *Handle,
 	RTC::CorbaConsumer<RTC::RTObject> corbaConsumer;
 	CORBA::Object_ptr object;
 	if((object=Resolve(*Handle)) == 0) {
-		err("Resolving Corba Consumer (addr=%s, name=%s) failed.", address, componentName);
+		err("Resolving Corba Consumer failed.");
 		*retval = -1; return;
 	}
 	corbaConsumer.setObject(object);
@@ -123,7 +123,7 @@ EXPORT_FUNCTION_TYPE Configuration_configure(const int *Handle,
 		}
 	}
 
-	err("Failed to find configuration(%s) in RTC(%s)", confName, componentName);
+	err("Failed to find configuration(%s) in RTC", confName);
 	*retval = -2;
 }
 
@@ -149,7 +149,7 @@ EXPORT_FUNCTION_TYPE Configuration_getValue(const int *Handle,
 	RTC::CorbaConsumer<RTC::RTObject> corbaConsumer;
 	CORBA::Object_ptr object;
 	if((object=Resolve(*Handle)) == 0) {
-		err("Resolving Corba Consumer (addr=%s, name=%s) failed.", address, componentName);
+		err("Resolving Corba Consumer failed.");
 		strcpy(retval, "failed"); return;
 	}
 	corbaConsumer.setObject(object);

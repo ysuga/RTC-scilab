@@ -28,7 +28,7 @@ EXPORT_FUNCTION_TYPE Port_create(const int *Handle, const char* portName, int* r
 	RTC::CorbaConsumer<RTC::RTObject> corbaConsumer;
 	CORBA::Object_ptr object;
 	if((object=Resolve(*Handle)) == 0) {
-		err("Resolving Corba Consumer (addr=%s, name=%s) failed.", address, componentName);
+		err("Resolving Corba Consumer failed.");
 		*retval = -1; return;
 	}
 	corbaConsumer.setObject(object);
