@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="UserMacros">
+    <user_lib />
+    <user_libd />
+  </PropertyGroup>
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <_PropertySheetDisplayName>User property</_PropertySheetDisplayName>
+  </PropertyGroup>
+  <ItemGroup>
+    <BuildMacro Include="user_lib">
+      <Value>$(user_lib)</Value>
+    </BuildMacro>
+    <BuildMacro Include="user_libd">
+      <Value>$(user_libd)</Value>
+    </BuildMacro>
+  </ItemGroup>
+</Project>

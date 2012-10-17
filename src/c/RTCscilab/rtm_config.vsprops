@@ -19,7 +19,7 @@
 	/>
 	<UserMacro
 		Name="omni_dllver"
-		Value="414"
+		Value="415"
 	/>
 	<UserMacro
 		Name="omnithread_dllver"
