@@ -15,6 +15,8 @@
 #ifndef RTCSCIOUTPORT_HEADER_INCLUDED
 #define RTCSCIOUTPORT_HEADER_INCLUDED
 
+#include <rtm/OutPort.h>
+#include <rtm/Typename.h>
 
 class RTCSciOutPortBase
 {

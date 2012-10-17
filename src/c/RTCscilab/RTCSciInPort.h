@@ -16,6 +16,8 @@
 #ifndef RTCSCIINPORT_HEADER_INCLUDED
 #define RTCSCIINPORT_HEADER_INCLUDED
 
+#include <rtm/InPort.h>
+#include <rtm/Typename.h>
 
 class RTCSciInPortBase
 {

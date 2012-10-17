@@ -51,7 +51,7 @@ function initRTM(ManagerName, libpath)
     return; 
   end;
 
-if MSDOS then,
+if getos() == "Windows" then,
   filename = RTCscilab_libpath + filesep() + "RTCscilab.dll";
 else,
   filename = RTCscilab_libpath + filesep() + "RTCscilab.so";

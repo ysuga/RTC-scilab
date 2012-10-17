@@ -37,8 +37,8 @@
 #include <rtm/Manager.h>
 #include <rtm/DataFlowComponentBase.h>
 #include <rtm/CorbaPort.h>
-#include <rtm/DataInPort.h>
-#include <rtm/DataOutPort.h>
+//#include <rtm/DataInPort.h>
+//#include <rtm/DataOutPort.h>
 #include <rtm/idl/BasicDataTypeSkel.h>
 
 

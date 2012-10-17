@@ -15,9 +15,11 @@ CFLAGS = "-I" + src_c_path;
 
 //chdir(src_c_path + "RTCscilab");
 chdir(src_c_path);
-if MSDOS then,
+if getos() == "Windows" then,
 unix("auto_build_vc9.bat");
 unix("auto_build_SimulationEC_vc9.bat");
+else if getos() == "Darwin" then,
+unix("bash ./auto_build.sh");
 else,
 unix("bash ./auto_build.sh");
 end;
